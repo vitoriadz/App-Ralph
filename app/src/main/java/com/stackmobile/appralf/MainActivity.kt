@@ -52,9 +52,9 @@ class MainActivity : AppCompatActivity() {
         //val bt_calcular = binding.btCalcular
 
         binding.btCalcular.setOnClickListener {
-            if (edit_peso.text.toString().isEmpty()){
+            if (binding.editPeso.text.toString().isEmpty()){
                 Toast.makeText( this, R.string.toast_infome_peso, Toast.LENGTH_SHORT).show()
-            } else if (edit_idade.text.toString().isEmpty()){
+            } else if (binding.editIdade.text.toString().isEmpty()){
                 Toast.makeText(this, R.string.toast_infome_idade, Toast.LENGTH_SHORT).show()
             } else {
                 val peso = binding.editPeso.text.toString().toDouble()
@@ -75,9 +75,9 @@ class MainActivity : AppCompatActivity() {
             alertDialog.setTitle(R.string.dialog_titulo)
                 .setMessage(R.string.dialog_desc)
                 .setPositiveButton("Ok", {dialogInterface, i ->
-                    edit_peso.setText("")
-                    edit_idade.setText("")
-                    txt_resultdo_ml.text = ""
+                    binding.editPeso.setText("")
+                    binding.editIdade.setText("")
+                    binding.txtResultadoMl.text = ""
                 })
             alertDialog.setNegativeButton("Cancelar", {dialogInterface, i ->
 
@@ -99,6 +99,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btAlarme.setOnClickListener {
+
+            val txt_hora = binding.txtHora
+            val txt_minutos = binding.txtMinutos
 
             if (!txt_hora.text.toString().isEmpty() && !txt_minutos.text.toString().isEmpty()){
                 val intent = Intent(AlarmClock.ACTION_SET_ALARM)
