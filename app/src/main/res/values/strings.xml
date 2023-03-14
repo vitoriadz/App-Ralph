@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">App Ralf</string>
-    <string name="hint_peso">Seu peso (Kg)</string>
-    <string name="hint_idade">Sua Idade</string>
+    <string name="hint_peso">SEU PESO (KG)</string>
+    <string name="hint_idade">SUA IDADE</string>
     <string name="text_button_calcular">Calcular Ingestão Diária</string>
     <string name="text_button_lembrete">Lembrete</string>
     <string name="text_button_alarme">Alarme</string>
